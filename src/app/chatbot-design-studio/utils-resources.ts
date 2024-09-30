@@ -1,9 +1,9 @@
 export const BRAND_BASE_INFO: { [key: string]: string | boolean } = {
-  COMPANY_NAME: 'GPT',
-  BRAND_NAME: 'GPT',
-  COMPANY_SITE_NAME: 'tiledesk.com',
-  COMPANY_SITE_URL: 'https://www.tiledesk.com',
-  CONTACT_US_EMAIL: 'support@tiledesk.com',
+  COMPANY_NAME: 'ChatRep',
+  BRAND_NAME: 'ChatRep',
+  COMPANY_SITE_NAME: '#',
+  COMPANY_SITE_URL: '#',
+  CONTACT_US_EMAIL: '#',
   FAVICON: 'assets/logos/tiledesk-circular-icon.svg',
   META_TITLE: 'Design Studio',
   DOCS: true,
@@ -16,27 +16,27 @@ export const LOGOS_ITEMS: {
 } = {
   COMPANY_LOGO: {
     label: BRAND_BASE_INFO.COMPANY_NAME,
-    icon: 'assets/logos/tiledesk_logo.svg',
+    icon: 'assets/logos/ChatRep_logo2.svg',
   },
   COMPANY_LOGO_NO_TEXT: {
     label: BRAND_BASE_INFO.COMPANY_NAME,
-    icon: 'assets/logos/tiledesk_logo_no_text.svg',
+    icon: 'assets/logos/ChatRep_logo_no_text.svg',
   },
   BASE_LOGO: {
     label: BRAND_BASE_INFO.BRAND_NAME,
-    icon: 'assets/logos/tiledesk_logo.svg',
+    icon: 'assets/logos/ChatRep_logo2.svg',
   },
   BASE_LOGO_NO_TEXT: {
     label: BRAND_BASE_INFO.BRAND_NAME,
-    icon: 'assets/logos/tiledesk_logo_no_text.svg',
+    icon: 'assets/logos/ChatRep_logo_no_text.svg',
   },
   BASE_LOGO_WHITE: {
     label: BRAND_BASE_INFO.BRAND_NAME,
-    icon: '"assets/logos/tiledesk-logo_new_white.svg',
+    icon: '"assets/logos/ChatRep-logo-new-white.svg',
   },
   BASE_LOGO_WHITE_NO_TEXT: {
     label: BRAND_BASE_INFO.BRAND_NAME,
-    icon: '"assets/logos/tiledesk-logo_new_white.svg',
+    icon: '"assets/logos/ChatRep-logo-new-white.svg',
   },
   BASE_LOGO_GRAY: {
     label: BRAND_BASE_INFO.BRAND_NAME,

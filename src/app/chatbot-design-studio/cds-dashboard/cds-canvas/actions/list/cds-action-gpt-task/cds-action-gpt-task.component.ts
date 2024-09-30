@@ -43,7 +43,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
   panelOpenState = false;
   model_list: Array<{ name: string, value: string }>;
   ai_response: string = "";
-  ai_error: string = "Oops! Something went wrong. Check your GPT Key or retry in a few moment."
+  ai_error: string = "Oops! Something went wrong. Check your ChatRep Key or retry in a few moment."
   // ai_error: string = "Oops! Something went wrong."
 
   showPreview: boolean = false;
@@ -79,7 +79,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.logger.debug("[ACTION GPT-TASK] ngOnInit action: ", this.action);
+    this.logger.debug("[ACTION ChatRep-TASK] ngOnInit action: ", this.action);
     const ai_models = loadTokenMultiplier(this.appConfigService.getConfig().aiModels)
     this.model_list = Object.values(TYPE_GPT_MODEL).filter(el=> el.status !== 'inactive').map((el)=> {
       if(ai_models[el.value])
@@ -196,12 +196,12 @@ export class CdsActionGPTTaskComponent implements OnInit {
       new_attributes.push({ name: "gpt_reply", value: "gpt_reply" });
     }
     variableList.find(el => el.key ==='userDefined').elements = [...variableList.find(el => el.key ==='userDefined').elements, ...new_attributes];
-    this.logger.debug("[ACTION GPT-TASK] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
+    this.logger.debug("[ACTION ChatRep-TASK] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
   }
 
   onChangeTextarea($event: string, property: string) {
-    this.logger.debug("[ACTION GPT-TASK] changeTextarea event: ", $event);
-    this.logger.debug("[ACTION GPT-TASK] changeTextarea propery: ", property);
+    this.logger.debug("[ACTION ChatRep-TASK] changeTextarea event: ", $event);
+    this.logger.debug("[ACTION ChatRep-TASK] changeTextarea propery: ", property);
     this.action[property] = $event;
     // this.checkVariables();
     // this.updateAndSaveAction.emit();
@@ -212,22 +212,22 @@ export class CdsActionGPTTaskComponent implements OnInit {
   }
 
   onSelectedAttribute(event, property) {
-    this.logger.log("[ACTION GPT-TASK] onEditableDivTextChange event", event)
-    this.logger.log("[ACTION GPT-TASK] onEditableDivTextChange property", property)
+    this.logger.log("[ACTION ChatRep-TASK] onEditableDivTextChange event", event)
+    this.logger.log("[ACTION ChatRep-TASK] onEditableDivTextChange property", property)
     this.action[property] = event.value;
     this.updateAndSaveAction.emit();
   }
 
   onChangeSelect(event, target) {
-    this.logger.debug("[ACTION GPT-TASK] onChangeSelect event: ", event.value)
-    this.logger.debug("[ACTION GPT-TASK] onChangeSelect target: ", target)
+    this.logger.debug("[ACTION ChatRep-TASK] onChangeSelect event: ", event.value)
+    this.logger.debug("[ACTION ChatRep-TASK] onChangeSelect target: ", target)
     this.action[target] = event.value;
     this.updateAndSaveAction.emit();
   }
 
   updateSliderValue(event, target) {
-    this.logger.debug("[ACTION GPT-TASK] updateSliderValue event: ", event)
-    this.logger.debug("[ACTION GPT-TASK] updateSliderValue target: ", target)
+    this.logger.debug("[ACTION ChatRep-TASK] updateSliderValue event: ", event)
+    this.logger.debug("[ACTION ChatRep-TASK] updateSliderValue target: ", target)
     this.action[target] = event;
 
     this.updateAndSaveAction.emit();
@@ -348,7 +348,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
       this.ai_response = ai_response;
     }, (err) => {
       this.searching = false;
-      this.logger.error("[ACTION GPT-TASK] previewPrompt error: ", err);
+      this.logger.error("[ACTION ChatRep-TASK] previewPrompt error: ", err);
       setTimeout(() => {
         let element = document.getElementById("preview-container");
         element.classList.add('preview-container-extended')
@@ -360,7 +360,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
       }
       this.ai_error = this.translate.instant('CDSCanvas.AiError')
     }, () => {
-      this.logger.debug("[ACTION GPT-TASK] preview prompt *COMPLETE*: ");
+      this.logger.debug("[ACTION ChatRep-TASK] preview prompt *COMPLETE*: ");
       this.searching = false;
     })
 
@@ -408,7 +408,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
   //         }, 200)
   //         this.ai_response = ai_response;
   //       }, (error) => {
-  //         this.logger.error("[ACTION GPT-TASK] previewPrompt error: ", error);
+  //         this.logger.error("[ACTION ChatRep-TASK] previewPrompt error: ", error);
   //         setTimeout(() => {
   //           let element = document.getElementById("preview-container");
   //           element.classList.add('preview-container-extended')
@@ -416,7 +416,7 @@ export class CdsActionGPTTaskComponent implements OnInit {
   //         this.showAiError = true;
   //         this.searching = false;
   //       }, () => {
-  //         this.logger.error("[ACTION GPT-TASK] preview prompt *COMPLETE*: ");
+  //         this.logger.error("[ACTION ChatRep-TASK] preview prompt *COMPLETE*: ");
   //         this.searching = false;
   //       })
   //     }

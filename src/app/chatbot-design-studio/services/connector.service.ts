@@ -476,7 +476,7 @@ export class ConnectorService {
           }
         }
 
-        /**  GPT-TASK */
+        /**  ChatRep-TASK */
         if(action._tdActionType === TYPE_ACTION.GPT_TASK){
           if(action.trueIntent && action.trueIntent !== ''){
             idConnectorFrom = intent.intent_id+'/'+action._tdActionId + '/true';
@@ -485,8 +485,8 @@ export class ConnectorService {
               action.trueIntent = '';
               idConnectorTo = null;
             }
-            this.logger.log('[CONNECTOR-SERV] - GPT-TASK ACTION -> idConnectorFrom', idConnectorFrom);
-            this.logger.log('[CONNECTOR-SERV] - GPT-TASK ACTION -> idConnectorTo', idConnectorTo);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-TASK ACTION -> idConnectorFrom', idConnectorFrom);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-TASK ACTION -> idConnectorTo', idConnectorTo);
             // this.createConnectorFromId(idConnectorFrom, idConnectorTo);
             this.createConnector(intent, idConnectorFrom, idConnectorTo);
           }
@@ -497,14 +497,14 @@ export class ConnectorService {
               action.falseIntent = '';
               idConnectorTo = null;
             }
-            this.logger.log('[CONNECTOR-SERV] - GPT-TASK ACTION -> idConnectorFrom', idConnectorFrom);
-            this.logger.log('[CONNECTOR-SERV] - GPT-TASK ACTION -> idConnectorTo', idConnectorTo);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-TASK ACTION -> idConnectorFrom', idConnectorFrom);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-TASK ACTION -> idConnectorTo', idConnectorTo);
             // this.createConnectorFromId(idConnectorFrom, idConnectorTo);
             this.createConnector(intent, idConnectorFrom, idConnectorTo);
           }
         }
 
-        /**  GPT-ASSISTANT */
+        /**  ChatRep-ASSISTANT */
         if(action._tdActionType === TYPE_ACTION.GPT_ASSISTANT){
           if(action.trueIntent && action.trueIntent !== ''){
             idConnectorFrom = intent.intent_id+'/'+action._tdActionId + '/true';
@@ -513,8 +513,8 @@ export class ConnectorService {
               action.trueIntent = '';
               idConnectorTo = null;
             }
-            this.logger.log('[CONNECTOR-SERV] - GPT-ASSISTANT ACTION -> idConnectorFrom', idConnectorFrom);
-            this.logger.log('[CONNECTOR-SERV] - GPT-ASSISTANT ACTION -> idConnectorTo', idConnectorTo);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-ASSISTANT ACTION -> idConnectorFrom', idConnectorFrom);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-ASSISTANT ACTION -> idConnectorTo', idConnectorTo);
             // this.createConnectorFromId(idConnectorFrom, idConnectorTo);
             this.createConnector(intent, idConnectorFrom, idConnectorTo);
           }
@@ -525,8 +525,8 @@ export class ConnectorService {
               action.falseIntent = '';
               idConnectorTo = null;
             }
-            this.logger.log('[CONNECTOR-SERV] - GPT-ASSISTANT ACTION -> idConnectorFrom', idConnectorFrom);
-            this.logger.log('[CONNECTOR-SERV] - GPT-ASSISTANT ACTION -> idConnectorTo', idConnectorTo);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-ASSISTANT ACTION -> idConnectorFrom', idConnectorFrom);
+            this.logger.log('[CONNECTOR-SERV] - ChatRep-ASSISTANT ACTION -> idConnectorTo', idConnectorTo);
             // this.createConnectorFromId(idConnectorFrom, idConnectorTo);
             this.createConnector(intent, idConnectorFrom, idConnectorTo);
           }

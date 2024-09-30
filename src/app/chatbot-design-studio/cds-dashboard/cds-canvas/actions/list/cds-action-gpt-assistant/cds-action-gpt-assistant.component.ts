@@ -41,9 +41,9 @@ export class CdsActionGptAssistantComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.logger.debug("[ACTION GPT-ASSISTANT] ngOnInit action: ", this.action);
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] ngOnInit action: ", this.action);
     this.subscriptionChangedConnector = this.intentService.isChangedConnector$.subscribe((connector: any) => {
-      this.logger.debug('[ACTION GPT-ASSISTANT] isChangedConnector -->', connector);
+      this.logger.debug('[ACTION ChatRep-ASSISTANT] isChangedConnector -->', connector);
       let connectorId = this.idIntentSelected+"/"+this.action._tdActionId;
       if(connector.fromId.startsWith(connectorId)){
         this.connector = connector;
@@ -114,7 +114,7 @@ export class CdsActionGptAssistantComponent implements OnInit {
           if(this.connector.save)this.updateAndSaveAction.emit({type: TYPE_UPDATE_ACTION.CONNECTOR, element: this.connector});
         } else { 
           // TODO: verificare quale dei due connettori è stato aggiunto (controllare il valore della action corrispondente al true/false intent)
-          this.logger.debug('[ACTION GPT-ASSISTANT] updateConnector', this.connector.toId, this.connector.fromId ,this.action, array[array.length-1]);
+          this.logger.debug('[ACTION ChatRep-ASSISTANT] updateConnector', this.connector.toId, this.connector.fromId ,this.action, array[array.length-1]);
           if(array[array.length -1] === 'true'){
             // this.action.trueIntent = '#'+this.connector.toId;
             this.isConnectedTrue = true;
@@ -132,7 +132,7 @@ export class CdsActionGptAssistantComponent implements OnInit {
         }
       }
     } catch (error) {
-      this.logger.error('[ACTION GPT-ASSISTANT] updateConnector error: ', error);
+      this.logger.error('[ACTION ChatRep-ASSISTANT] updateConnector error: ', error);
     }
   }
 
@@ -149,22 +149,22 @@ export class CdsActionGptAssistantComponent implements OnInit {
       new_attributes.push({ name: "assistantError", value: "assistantError" });
     }
     variableList.find(el => el.key ==='userDefined').elements = [...variableList.find(el => el.key ==='userDefined').elements, ...new_attributes];
-    this.logger.debug("[ACTION GPT-ASSISTANT] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
   }
 
   onChangeTextarea($event: string, property: string) {
-    this.logger.debug("[ACTION GPT-ASSISTANT] changeTextarea event: ", $event);
-    this.logger.debug("[ACTION GPT-ASSISTANT] changeTextarea propery: ", property);
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] changeTextarea event: ", $event);
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] changeTextarea propery: ", property);
     this.action[property] = $event;
     // this.checkVariables();
     // this.updateAndSaveAction.emit();
   }
 
   onSelectedAttribute(event, property) {
-    this.logger.log("[ACTION GPT-ASSISTANT] onEditableDivTextChange event", event)
-    this.logger.log("[ACTION GPT-ASSISTANT] onEditableDivTextChange property", property)
+    this.logger.log("[ACTION ChatRep-ASSISTANT] onEditableDivTextChange event", event)
+    this.logger.log("[ACTION ChatRep-ASSISTANT] onEditableDivTextChange property", property)
     this.action[property] = event.value;
-    this.logger.log("[ACTION GPT-ASSISTANT] Action updated: ", this.action);
+    this.logger.log("[ACTION ChatRep-ASSISTANT] Action updated: ", this.action);
     this.updateAndSaveAction.emit();
   }
 
@@ -173,8 +173,8 @@ export class CdsActionGptAssistantComponent implements OnInit {
   }
 
   onChangeSelect(event, target) {
-    this.logger.debug("[ACTION GPT-ASSISTANT] onChangeSelect event: ", event.value)
-    this.logger.debug("[ACTION GPT-ASSISTANT] onChangeSelect target: ", target)
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] onChangeSelect event: ", event.value)
+    this.logger.debug("[ACTION ChatRep-ASSISTANT] onChangeSelect target: ", target)
     this.action[target] = event.value;
     this.updateAndSaveAction.emit();
   }

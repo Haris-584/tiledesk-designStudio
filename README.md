@@ -2,7 +2,7 @@
 
 ![image](https://github.com/Tiledesk/design-studio/assets/32564846/e68caebb-bdab-48bb-a744-cc8821e20bfe)
 
-Tiledesk is an open-source, no-code development platform for creating chatbots and conversational apps. Our Design Studio, featured in this repository, offers a user-friendly, drag-and-drop interface with pre-ready actions and integrations. This platform combines the power of LLM/GPT AI with a flexible 'graph' approach for creating conversations and automations with ease.
+Tiledesk is an open-source, no-code development platform for creating chatbots and conversational apps. Our Design Studio, featured in this repository, offers a user-friendly, drag-and-drop interface with pre-ready actions and integrations. This platform combines the power of LLM/ChatRep AI with a flexible 'graph' approach for creating conversations and automations with ease.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
 
 <a href="https://www.producthunt.com/posts/design-studio-by-tiledesk?utm_source=badge-golden-kitty-badge&utm_medium=badge&utm_souce=badge-design&#0045;studio&#0045;by&#0045;tiledesk" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/golden-kitty-badge.svg?post_id=418558&theme=light" alt="Design&#0032;Studio&#0032;by&#0032;Tiledesk - Unlock&#0032;AI&#0032;magic&#0032;for&#0032;elevated&#0032;customer&#0032;engagement&#0044;&#0032;fast | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>

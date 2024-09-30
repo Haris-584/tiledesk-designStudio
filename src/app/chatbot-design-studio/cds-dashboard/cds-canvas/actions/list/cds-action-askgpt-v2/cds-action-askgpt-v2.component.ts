@@ -293,8 +293,8 @@ export class CdsActionAskgptV2Component implements OnInit {
   }
 
   updateSliderValue(event, target) {
-    this.logger.debug("[ACTION GPT-TASK] updateSliderValue event: ", event)
-    this.logger.debug("[ACTION GPT-TASK] updateSliderValue target: ", target)
+    this.logger.debug("[ACTION ChatRep-TASK] updateSliderValue event: ", event)
+    this.logger.debug("[ACTION ChatRep-TASK] updateSliderValue target: ", target)
     this.action[target] = event;
     this.updateAndSaveAction.emit();
   }
@@ -379,7 +379,7 @@ export class CdsActionAskgptV2Component implements OnInit {
       this.ai_response = ai_response.answer;
     }, (err) => {
       this.searching = false;
-      this.logger.error("[ACTION GPT-TASK] previewPrompt error: ", err);
+      this.logger.error("[ACTION ChatRep-TASK] previewPrompt error: ", err);
       setTimeout(() => {
         let element = document.getElementById("preview-container");
         element.classList.add('preview-container-extended')
@@ -392,7 +392,7 @@ export class CdsActionAskgptV2Component implements OnInit {
       
       this.ai_error = this.translate.instant('CDSCanvas.AiError')
     }, () => {
-      this.logger.debug("[ACTION GPT-TASK] preview prompt *COMPLETE*: ");
+      this.logger.debug("[ACTION ChatRep-TASK] preview prompt *COMPLETE*: ");
       this.searching = false;
     })
 

@@ -20,9 +20,9 @@ export class BrandService {
 
   _brand = {
     DASHBOARD: {
-      META_TITLE: 'GPT Support Dashboard',
-      FAVICON_URL: 'https://i.ibb.co/cD5hS42/logo-short-0.png',
-      company_name: 'GPT',
+      META_TITLE: 'ChatRep Support Dashboard',
+      FAVICON_URL: 'https://i.ibb.co/xzyFjXH/Chat-Rep-fav-icon.png',
+      company_name: 'ChatRep',
       company_site_name: 'tiledesk.com',
       company_site_url: 'https://www.tiledesk.com',
       company_logo_white__url:
@@ -31,7 +31,7 @@ export class BrandService {
         'assets/img/logos/tiledesk_3.0_logo_black_v2_no_version.svg',
       company_logo_allwhite__url:
         'assets/img/logos/tiledesk_3.0_logo_all_white_v2_no_version.svg',
-      company_logo_no_text__url: 'assets/img/logos/tiledesk-solo-logo.png',
+      company_logo_no_text__url: 'assets/img/logos/ChatRep-solo-logo.png',
       privacy_policy_link_text: 'Privacy Policy',
       privacy_policy_url: 'https://www.tiledesk.com/privacy.html',
       display_terms_and_conditions_link: true,
@@ -48,19 +48,19 @@ export class BrandService {
         display_terms_and_conditions_link: true,
       },
       handle_invitation_page: {
-        company_logo_45x45: 'assets/img/logos/tiledesk-solo-logo.png',
+        company_logo_45x45: 'assets/img/logos/ChatRep-solo-logo.png',
       },
       wizard_create_project_page: {
         logo_x_rocket: 'assets/img/logos/logo_x_rocket4x4.svg',
       },
       wizard_install_widget_page: {
-        logo_on_rocket: 'assets/img/logos/tiledesk-solo-logo.png',
+        logo_on_rocket: 'assets/img/logos/ChatRep-solo-logo.png',
       },
     },
     CHAT: {},
     CDS: {
       META_TITLE: 'Design Studio',
-      FAVICON_URL: 'https://i.ibb.co/cD5hS42/logo-short-0.png',
+      FAVICON_URL: 'https://i.ibb.co/xzyFjXH/Chat-Rep-fav-icon.png',
       INFO_MENU_ITEMS: [
         { key: 'HELP_CENTER', icon: '', src: '', status: 'inactive' },
         { key: 'ROAD_MAP', icon: '', src: '', status: 'inactive' },
@@ -71,14 +71,14 @@ export class BrandService {
       ],
     },
     COMMON: {
-      COMPANY_LOGO: 'assets/logos/tiledesk_logo.svg',
-      COMPANY_LOGO_NO_TEXT: 'assets/logos/tiledesk_logo.svg',
-      BASE_LOGO: 'assets/logos/tiledesk_logo.svg',
-      BASE_LOGO_NO_TEXT: 'assets/logos/tiledesk_logo.svg',
-      BASE_LOGO_WHITE: 'assets/logos/tiledesk-logo_new_white.svg',
+      COMPANY_LOGO: 'assets/logos/ChatRep_logo2.svg',
+      COMPANY_LOGO_NO_TEXT: 'assets/logos/ChatRep_logo2.svg',
+      BASE_LOGO: 'assets/logos/ChatRep_logo2.svg',
+      BASE_LOGO_NO_TEXT: 'assets/logos/ChatRep_logo2.svg',
+      BASE_LOGO_WHITE: 'assets/logos/ChatRep-logo-new-white.svg',
       BASE_LOGO_WHITE_NO_TEXT: '',
-      COMPANY_NAME: 'GPT',
-      BRAND_NAME: 'GPT',
+      COMPANY_NAME: 'ChatRep',
+      BRAND_NAME: 'ChatRep',
       COMPANY_SITE_NAME: '#',
       COMANY_SITE_URL: '#',
       CONTACT_US_EMAIL: 'support@tiledesk.com',

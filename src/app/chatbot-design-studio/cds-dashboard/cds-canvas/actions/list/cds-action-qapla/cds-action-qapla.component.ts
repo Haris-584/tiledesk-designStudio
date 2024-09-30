@@ -164,7 +164,7 @@ export class CdsActionQaplaComponent implements OnInit {
       new_attributes.push({ name: "qapla_error", value: "qapla_error" });
     }
     variableList.find(el => el.key ==='userDefined').elements = [...variableList.find(el => el.key ==='userDefined').elements, ...new_attributes];
-    this.logger.debug("[ACTION GPT-TASK] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
+    this.logger.debug("[ACTION ChatRep-TASK] Initialized variableList.userDefined: ", variableList.find(el => el.key ==='userDefined'));
   }
 
   changeTextarea($event: string, property: string) {
