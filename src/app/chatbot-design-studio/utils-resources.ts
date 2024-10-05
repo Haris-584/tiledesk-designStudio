@@ -4,7 +4,7 @@ export const BRAND_BASE_INFO: { [key: string]: string | boolean } = {
   COMPANY_SITE_NAME: '#',
   COMPANY_SITE_URL: '#',
   CONTACT_US_EMAIL: '#',
-  FAVICON: 'assets/logos/tiledesk-circular-icon.svg',
+  FAVICON: 'assets/logos/ChatRep-circular-icon.svg',
   META_TITLE: 'Design Studio',
   DOCS: true,
   COMMUNITY_SECTION: true,
